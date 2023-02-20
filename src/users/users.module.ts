@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { APP_INTERCEPTOR } from '@nestjs/core';
-import { UsersController } from 'src/users/users.controller';
-import { UsersService } from 'src/users/users.service';
-import { AuthService } from 'src/users/auth.service';
-import { User } from 'src/users/user.entity';
-import { CurrentUserInterceptor } from 'src/users/interceptors/current-user.interceptor';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
+import { AuthService } from './auth.service';
+import { User } from './user.entity';
+import { CurrentUserInterceptor } from '../users/interceptors/current-user.interceptor';
 
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
