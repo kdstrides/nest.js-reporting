@@ -16,13 +16,13 @@ describe('AuthController (e2e)', () => {
   });
 
   it('handle a signup request', () => {
-    const email = 'email25@gmail.com';
+    const email = 'email21@gmail.com';
 
     return request(app.getHttpServer())
       .post('/auth/signup')
       .send({
         email,
-        password: 'email25',
+        password: 'email21',
       })
       .expect(201)
       .then((response) => {
